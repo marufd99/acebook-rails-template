@@ -4,11 +4,6 @@ ATTEMPTED CHANGE ON MARIANNE BRANCH!!!!!!!!!
 
 REQUIRED INSTRUCTIONS:
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
-
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
 2. The card wall is here: https://trello.com/b/J0a1ymtY/cryptaur
 
 ## How to contribute to this project
