@@ -4,3 +4,7 @@ script: bundle exec rspec
 
 services:
   - postgresql
+
+test:
+  adapter: postgresql
+  database: pgapp_test
