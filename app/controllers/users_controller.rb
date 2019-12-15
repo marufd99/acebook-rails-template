@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+# need to figure out how to put this table into dababase
   def new
     @user = User.new
   end
