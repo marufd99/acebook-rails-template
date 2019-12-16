@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-13T12:31:17+00:00">2019-12-13T12:31:17+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-13T16:53:16+00:00">2019-12-13T16:53:16+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.36
+         1.56
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>27</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
+    <b>37</b> relevant lines. 
+    <span class="green"><b>37</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,7 +67,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -93,9 +93,9 @@
       <tr>
         <td class="strong"><a href="#0a21ab3c088f91327bbe5515f8d5c1e4108203d3" class="src_link" title="spec/features/user_can_submit_posts_spec.rb">spec/features/user_can_submit_posts_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>8</td>
-        <td>8</td>
+        <td>24</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -189,8 +189,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
           
           <code class="ruby">    @post = Post.new</code>
         </li>
@@ -213,14 +213,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">    @post = Post.create(post_params)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    redirect_to posts_url</code>
         </li>
@@ -243,8 +243,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6" data-linenumber="12">
+          <span class="hits">6</span>
           
           <code class="ruby">    @posts = Post.all</code>
         </li>
@@ -279,8 +279,8 @@
           <code class="ruby">  def post_params</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="18">
+          <span class="hits">5</span>
           
           <code class="ruby">    params.require(:post).permit(:message)</code>
         </li>
@@ -375,8 +375,8 @@
     <h3>spec/features/user_can_submit_posts_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -405,7 +405,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &quot;Can submit posts and view them&quot; do</code>
+          <code class="ruby">  scenario &quot;Can submit posts and view them along with the creation date and time&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -438,13 +438,91 @@
           <code class="ruby">    expect(page).to have_content(&quot;Hello, world!&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(Time.now.strftime(&quot;%d/%m/%Y&quot;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &quot;Can view posts with the latest post first&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/posts&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;New post&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Message&quot;, with: &quot;Hello, world!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Submit&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;New post&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Message&quot;, with: &quot;Goodbye, world!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Submit&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&quot;Goodbye, world! #{Time.now.strftime(&quot;%d/%m/%Y&quot;)} Hello, world!&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
