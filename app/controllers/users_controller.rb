@@ -19,5 +19,6 @@ class UsersController < ApplicationController
     # params.require(?).permit(?)
     # needs id, name username email password
 end
+end
 
 # created models/user.rb

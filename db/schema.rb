@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20191213165443) do
     t.datetime "updated_at", null: false
   end
 
-# when you run rails db:migrate creates the table and this is generated
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
