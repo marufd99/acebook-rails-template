@@ -2,7 +2,9 @@
   <p><%= post.message %></p>
   <p><%= post.created_at.strftime("%d/%m/%Y") %></p>
 <% end %>
-
+<div class="jumbotron">
 <%= link_to new_post_path do %>
-  New post
+<button type="button" class="btn btn-success">New Post</button>
+  <!-- New post -->
 <% end %>
+</div>
