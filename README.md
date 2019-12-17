@@ -1,7 +1,4 @@
-Jo git branch check
 # AceBook
-
-ATTEMPTED CHANGE ON MARIANNE BRANCH!!!!!!!!!
 
 REQUIRED INSTRUCTIONS:
 
