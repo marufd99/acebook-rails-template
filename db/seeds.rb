@@ -9,3 +9,8 @@
 Post.create(message: 'A test seed')
 Post.create(message: 'A test seed post')
 Post.create(message: 'A test seed post 2')
+
+User.create(name: 'Bob')
+User.create(username: 'Bobby')
+User.create(email: 'bob@bobette.com')
+User.create(password: 'BobbyBoy')
