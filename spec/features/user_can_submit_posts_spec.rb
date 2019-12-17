@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
+
   scenario "Can submit posts and view them along with the creation date and time" do
     visit "/posts"
     click_link "New post"

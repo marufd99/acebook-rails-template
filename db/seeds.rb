@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Post.create(message: 'A test seed', user_id: "2")
-Post.create(message: 'A test seed post', user_id: "2")
-Post.create(message: 'A test seed post 2', user_id: "2")
-
 User.create(name: 'Bob', username: 'Bobby', email: 'bob@bobette.com', password: 'BobbyBoy')
 User.create(name: 'Jim', username: 'Jimmy', email: 'jim@bobette.com', password: 'JimmyBoy')
+
+Post.create(message: 'A test seed', user_id: '2')
+Post.create(message: 'A test seed post', user_id: '2')
+Post.create(message: 'A test seed post 2', user_id: '2')
