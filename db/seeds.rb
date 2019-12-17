@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: 'Bob', username: 'Bobby', email: 'bob@bobette.com', password: 'BobbyBoy')
-User.create(name: 'Jim', username: 'Jimmy', email: 'jim@bobette.com', password: 'JimmyBoy')
+User.create(name: 'Bob', username: 'Bobby', email: 'bob@bobette.com', password_digest: 'BobbyBoy')
+User.create(name: 'Jim', username: 'Jimmy', email: 'jim@bobette.com', password_digest: 'JimmyBoy')
 
 Post.create(message: 'A test seed', user_id: '2')
 Post.create(message: 'A test seed post', user_id: '2')
