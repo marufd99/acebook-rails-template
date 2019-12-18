@@ -18,13 +18,11 @@ class UsersController < ApplicationController
    :password))
    session[:user_id] = @user.id
    redirect_to posts_url
-end
+ end
 
   def index
     @users = User.all
     # singn in and sign up buttons, redirect
   end
 
-
-
-  private
+end
