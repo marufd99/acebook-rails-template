@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  skip_before_action :require_login
+
   def new
   end
 
@@ -22,7 +25,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "Logged out"
     redirect_to sessions_login_url
-
   end
 
   def welcome

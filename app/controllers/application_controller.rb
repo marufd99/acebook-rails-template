@@ -11,13 +11,24 @@ class ApplicationController < ActionController::Base
 
 # to keep trackof current user these are also used in welcome.html.erb
 # to determine is a user is already logged_in
+
+  before_action :require_login
+
+  private
+
+  def require_login
+    unless current_user
+      redirect_to login_url
+    end
+  end
+
   def current_user
     User.find_by(id: session[:user_id])
-end
+  end
 
-def logged_in?
+  def logged_in?
     !current_user.nil?
-end
+  end
 
 # unless a user is logged in, he will be
 #   redirected to the welcome page

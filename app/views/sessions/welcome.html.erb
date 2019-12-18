@@ -4,9 +4,10 @@
 
 <!-- this does not work that well, sometimes it is displayed
 when you are on the welcome page  -->
- <% if logged_in? %>
-    <h1>You are Logged In, <%= current_user.username %></h1>
-<%end%>
+
+<% if logged_in? %>
+  <h1> You are logged in, <%= current_user.username %> </h1>
+<% end %>
 
 <%= button_to "Login", 'sessions/login', method: :get%>
 <%= button_to "Sign Up", '/users/new', method: :get%>
