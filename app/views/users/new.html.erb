@@ -9,16 +9,17 @@ body {
 <!-- @use is initialized in UsersController as @user = User.new -->
 <%= form_for @user do |f| %>
 
-<%= f.label :name%> <br>
-<%= f.text_field :name%><br>
+<%= f.label :name %> <br>
+<%= f.text_field :name, required: true %><br>
 
-<%= f.label :username%> <br>
+<%= f.label :username %> <br>
+<%= f.text_field :username, required: true %><br>
 
-<%= f.text_field :username%><br>
-<%= f.label :email%> <br>
+<%= f.label :email %> <br>
+<%= f.email_field :email, required: true %><br>
 
-<%= f.text_field :email%><br>
-<%= f.label :password%><br>
-<%= f.password_field :password%><br>
+<%= f.label :password %><br>
+<%= f.password_field :password, required: true, maxlength: 10, minlength: 6 %><br>
+
 <%= f.submit %>
 <%end%>

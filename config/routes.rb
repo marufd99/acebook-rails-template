@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'sessions#welcome'
+
   get 'sessions/new'
 
   get 'sessions/create'

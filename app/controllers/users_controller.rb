@@ -14,10 +14,10 @@ class UsersController < ApplicationController
   # end
 
   def create
-   @user = User.create(params.require(:user).permit(:username,
+   @user = User.create(params.require(:user).permit(:name, :username, :email,
    :password))
    session[:user_id] = @user.id
-   redirect_to posts_url
+   redirect_to posts_url, :flash => {:success => "You've successfully signed up!"}
  end
 
   def index
