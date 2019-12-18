@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20191217104252) do
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,4 +31,5 @@ ActiveRecord::Schema.define(version: 20191217104252) do
     t.string "password_digest"
   end
 
+  add_foreign_key "posts", "users"
 end

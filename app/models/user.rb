@@ -1,7 +1,6 @@
 class User < ApplicationRecord
 
+
   # set up a macro to utilize Bcrypt methods
   has_secure_password
-
-
-end
+  has_many :posts, dependent: :destroy

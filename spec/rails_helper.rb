@@ -7,6 +7,8 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'simplecov'
 require 'spec_helper'
 require 'rspec/rails'
+require 'database_cleaner'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 
@@ -31,6 +33,13 @@ SimpleCov.start
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
+    Rails.application.load_seed
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
