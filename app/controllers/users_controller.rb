@@ -20,4 +20,9 @@ class UsersController < ApplicationController
       # singn in and sign up buttons, redirect
     end
 
+<<<<<<< HEAD
   end
+=======
+
+  private
+>>>>>>> b6c42f9a84b8f1edc14f0c65823ed03c10e21c8c
