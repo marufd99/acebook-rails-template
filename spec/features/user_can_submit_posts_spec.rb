@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
+
   scenario "Can submit posts and view them along with the creation date and time" do
     visit "/posts"
     click_link "New post"
@@ -18,7 +19,7 @@ RSpec.feature "Timeline", type: :feature do
     click_link "New post"
     fill_in "Message", with: "Goodbye, world!"
     click_button "Submit"
-    expect(page).to have_content("Goodbye, world! #{Time.now.strftime("%d/%m/%Y")} Hello, world!")
+    expect(page).to have_content("Goodbye, world! #{Time.now.strftime("%d/%m/%Y")} 1 Hello, world!")
   end
 
 end
