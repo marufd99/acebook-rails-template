@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+
+ <!-- current_user returns the user instance and we can then use the name %> -->
+
+<!-- this does not work that well, sometimes it is displayed
+when you are on the welcome page  -->
+ <% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+<%end%>
+
+<%= button_to "Login", 'sessions/login', method: :get%>
+<%= button_to "Sign Up", '/users/new', method: :get%>
