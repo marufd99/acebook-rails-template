@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to posts_url
+      redirect_to posts_url, :flash => {:success => "You have successfully logged in!"}
     else
       flash.now[:error] = "Wrong username or password!"
       # redirect_to sessions_login_url
