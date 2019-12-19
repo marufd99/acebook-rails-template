@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 #requirement set in ApplicationController
 # skip_before_action :authorized, only: [:new, :create]
 
+  skip_before_action :require_login
+
   def new
     @user = User.new
   end
