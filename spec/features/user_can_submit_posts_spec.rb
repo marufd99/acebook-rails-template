@@ -24,7 +24,7 @@ RSpec.feature "Timeline", type: :feature do
     fill_in "Message", with: "Goodbye, world!"
     click_button "Submit"
     save_and_open_page
-    expect(page).to have_content("marianne Goodbye, world! #{Time.now.strftime("%d/%m/%Y")} marianne Hello, world!")
+    expect(page).to have_content("New post marianne #{Time.now.strftime("%d/%m/%Y")} Goodbye, world! marianne #{Time.now.strftime("%d/%m/%Y")} Hello, world!")
   end
 
 end
