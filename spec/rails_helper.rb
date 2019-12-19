@@ -8,6 +8,7 @@ require 'simplecov'
 require 'spec_helper'
 require 'rspec/rails'
 require 'database_cleaner'
+require './spec/support/factory_bot.rb'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

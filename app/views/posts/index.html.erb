@@ -1,11 +1,11 @@
-<% @posts.reverse.each do |post| %>
-  <p><%= post.user.name %>
-  <p><%= post.message %></p>
-  <p><%= post.created_at.strftime("%d/%m/%Y") %></p>
-<% end %>
 <div class="jumbotron">
 <%= link_to new_post_path do %>
 <button type="button" class="btn btn-success">New post</button>
   <!-- New post -->
 <% end %>
 </div>
+<% @posts.reverse.each do |post| %>
+  <p><%= post.user.username %>
+  <p><%= post.message %></p>
+  <p><%= post.created_at.strftime("%d/%m/%Y") %></p>
+<% end %>

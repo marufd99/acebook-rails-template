@@ -5,6 +5,8 @@ RSpec.describe PostsController, type: :controller do
   describe "GET /new " do
     xit "responds with 200" do
       get :new
+      user1 = create(:user)
+      user1.authenticate("123456")
       expect(response).to have_http_status(200)
     end
   end
