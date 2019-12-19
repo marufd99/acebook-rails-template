@@ -1,14 +1,27 @@
-<h1>Welcome</h1>
+<div class="p-3 mb-2 bg-info text-black">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Welcome to Acebook</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<img src = "./img/logowarning.png" class = "img">
+<img src = "./img/Logoforapp.png" class = "img">
+
 
  <!-- current_user returns the user instance and we can then use the name %> -->
 
 <!-- this does not work that well, sometimes it is displayed
 when you are on the welcome page  -->
-
+<br>
 <% if logged_in? %>
-  <h1> You are logged in, <%= current_user.username %> </h1>
+  <h2> You are logged in, <%= current_user.username %> </h2>
 <% end %>
-
+<br>
 <%= button_to "Login", 'sessions/login', method: :get%>
+<br>
 <%= button_to "Sign Up", '/users/new', method: :get%>
+<br>
 <%= button_to "Logout", logout_path, method: 'logout'%>

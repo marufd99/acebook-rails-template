@@ -1,8 +1,4 @@
-<style>
-body {
-  background-color: purple;
-}
-</style>
+<div class="p-3 mb-2 bg-info text-black">
 
 <h1> Sign Up</h1>
 
@@ -17,6 +13,6 @@ body {
 
 <%= f.label :password %><br>
 <%= f.password_field :password, required: true, maxlength: 10, minlength: 6 %><br>
-
+<br>
 <%= f.submit %>
 <%end%>
