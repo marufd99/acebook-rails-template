@@ -1,6 +1,5 @@
 <% @posts.reverse.each do |post| %>
-  <p><%= post.user_id %>
-    <!-- post.user -->
+  <p><%= post.user.name %>
   <p><%= post.message %></p>
   <p><%= post.created_at.strftime("%d/%m/%Y") %></p>
 <% end %>
