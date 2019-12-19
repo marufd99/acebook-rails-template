@@ -1,11 +1,14 @@
 <style>
+
 body {
-  background-color: purple;
+  background-color: rgba(156, 19, 66, 0.9);;
 }
 </style>
 
-<h1> Sign Up</h1>
 
+
+<div class="col-md-2 col-md-offset-6" >
+  <h1> Sign Up</h1>
 <!-- @use is initialized in UsersController as @user = User.new -->
 <%= form_for @user do |f| %>
 
@@ -20,5 +23,6 @@ body {
 <%= f.text_field :email%><br>
 <%= f.label :password%><br>
 <%= f.password_field :password%><br>
-<%= f.submit %>
+<%= f.submit  "Create my account", class: "btn btn-primary" %>
 <%end%>
+</div>
