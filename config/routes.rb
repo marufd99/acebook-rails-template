@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'welcome', to: 'sessions#welcome'
-
+  post 'logout', to: 'sessions#logout'
+  # post 'logout', to: 'sessions#welcome'
   # some pages are only accessible to users that are logged in
   # every route except /authorized will be accessible to all
   get 'authorized', to: 'sessions#page_requires_login'
